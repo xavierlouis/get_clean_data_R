@@ -39,7 +39,7 @@ df_y_names<-mutate(df_y, sport = ifelse(V1 == 5, "STANDING",
                                                                       NA)))))))
 
 # ADDS the variable ACTIVITY to the dataset
-df_all<-cbind(df_x2, df_y_names)
+df_all<-cbind(df_x2, df_y_names$sport)
 
 ## STEP 5
 ## From the data set in step 4, creates a second, independent tidy data set with 
@@ -48,7 +48,7 @@ df_all<-cbind(df_x2, df_y_names)
 # ADDS the variable SUBJECT to the dataset
 df_all<-cbind(df_all, df_subject)
 
-tidy_data<-summarize(group_by(df_all, sport, V1))
+tidy_data<-summarize(group_by(df_all, df_y_names$sport, V1))
 
 write.table(tidy_data, "tidydata.txt", sep="\t")
 
