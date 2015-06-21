@@ -1,0 +1,21 @@
+Variables description used in the run_analysis.R file
+
+xtrain : contains the data from the "train/X_train.txt" file
+xtest : contains the data from the  "test/X_test.txt" file
+ytrain : contains the data from the  "train/y_train.txt") file
+ytest : contains the data from the  "test/y_test.txt") file
+subject_train : contains the data from the  "train/subject_train.txt") file
+subject_test : contains the data from the  "test/subject_test.txt") file
+features_titles : contains the data from the  "features.txt" file
+
+df_x : contains the merged data between xtrain and xtest
+df_y : contains the merged data between ytrain and ytest
+df_subject : contains the merged data between subject_test and subject_train
+
+colist : used to create a list of the columns (variables) containing the words "mean" and "std"
+
+df_x2 : dataset with only the variables containing "mean" and "std" : 79 variables
+
+df_y_names : dataset with the Sports activity (instead of just a number)
+
+df_all : final dataset (df_x2 + df_y_names + df_subject)
